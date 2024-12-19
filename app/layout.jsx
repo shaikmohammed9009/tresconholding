@@ -1,0 +1,30 @@
+import './globals.css';
+import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
+import { Inter, Manrope } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+const manrope = Manrope({ subsets: ['latin'] });
+
+export const metadata = {
+  title: 'Trescon Holdings',
+  description: "Building Tomorrow's Business Ecosystem",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className="overflow-x-hidden">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${inter.className} ${manrope.variable} overflow-x-hidden`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
