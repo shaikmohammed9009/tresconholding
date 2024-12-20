@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
-export function NavLink({ href, children, onClick }) {
+export function NavLink({ href, children, className, onClick, ...props }) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -11,11 +12,16 @@ export function NavLink({ href, children, onClick }) {
     <Link
       href={href}
       onClick={onClick}
-      className={`py-2 px-4 font-medium hover:font-semibold text-white hover:text-[#00A5A3] transition-colors ${
-        isActive ? 'font-semibold text-[#00A5A3]' : 'font-medium'
-      }`}
+      className={cn(
+        'relative py-2 font-medium transition-colors',
+        'hover:text-[#C0F43C] group',
+        isActive ? 'text-[#C0F43C]' : 'text-white',
+        className
+      )}
+      {...props}
     >
       {children}
+      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C0F43C] scale-x-0 transition-transform group-hover:scale-x-100" />
     </Link>
   );
 }

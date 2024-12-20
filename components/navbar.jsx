@@ -11,9 +11,17 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const isScrolled = useScroll();
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header
-      className={` fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-[#003B3D]/95 backdrop-blur-sm shadow-md' : 'bg-[#003B3D]'
       }`}
     >
@@ -22,11 +30,11 @@ export function Navbar() {
           <Logo />
           <DesktopNav />
           <div className="md:hidden">
-            <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+            <HamburgerButton isOpen={isOpen} onClick={toggleMenu} />
           </div>
         </div>
       </div>
-      <MobileNav isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <MobileNav isOpen={isOpen} onClose={closeMenu} />
     </header>
   );
 }
