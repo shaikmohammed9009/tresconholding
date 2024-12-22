@@ -1,4 +1,4 @@
-import { LAYOUT_CONSTANTS } from '@/lib/constants';
+"use client";
 
 export function VisionContainer({ children }) {
   return (

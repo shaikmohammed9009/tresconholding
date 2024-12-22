@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { LAYOUT_CONSTANTS } from '@/lib/constants';
 
 export function VisionHeading() {
   return (
@@ -12,13 +11,11 @@ export function VisionHeading() {
       transition={{ duration: 0.6 }}
       className="mb-16"
     >
-      <h2 
-        id="vision1" 
-        className="text-[#00A5A366] text-lg font-semibold pb-4 border-b border-[#00A5A366] "
-        
-      >
-        VISION
-      </h2>
-    </motion.div>
+   
+        <h2 className="text-[#00A5A3] text-lg font-semibold pb-4 border-b border-[#00A5A3]/40">
+          VISION
+        </h2>
+      </motion.div>
+    
   );
 }

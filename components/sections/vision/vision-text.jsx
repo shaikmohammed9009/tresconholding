@@ -1,7 +1,8 @@
 "use client";
 
-import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { VisionWord } from './vision-word';
+import { VisionImage } from './vision-image';
 
 export function VisionText() {
   return (

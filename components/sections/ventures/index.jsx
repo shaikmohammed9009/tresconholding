@@ -11,7 +11,7 @@ export function VenturesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <section className="relative py-24 bg-[#1E2124]">
+    <section id="ventures" className="relative py-24 bg-[#1E2124]">
       <VenturesContainer>
         <VenturesHeader />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-16">

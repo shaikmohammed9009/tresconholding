@@ -11,7 +11,7 @@ export function AboutContent() {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
       <p 
-        className="font-['Manrope'] text-[22px] font-[400] leading-[39.6px] text-left text-gray-200"
+        className="font-['Manrope'] text-[22px] font-[400] leading-[39.6px] text-left text-[#1E2124]"
         style={{ 
           textUnderlinePosition: 'from-font',
           textDecorationSkipInk: 'none'

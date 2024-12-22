@@ -1,5 +1,5 @@
 import './globals.css';
-import { Navbar } from '@/components/navbar';
+import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { Inter, Manrope } from 'next/font/google';
 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${inter.className} ${manrope.variable} overflow-x-hidden`}>
-        <Navbar />
+        <Navigation />
         {children}
         <Footer />
       </body>
