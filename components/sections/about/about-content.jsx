@@ -11,7 +11,7 @@ export function AboutContent() {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
          <h3 
-        className="font-['Anek_Devanagari'] text-[60px] font-[500] leading-[66px] text-left text-[#1E2124]"
+        className="font-['Anek_Devanagari'] mb-12    text-[60px] font-[500] leading-[66px] text-left text-[#1E2124]"
         style={{ 
           textUnderlinePosition: 'from-font',
           textDecorationSkipInk: 'none'
