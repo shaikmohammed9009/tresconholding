@@ -21,7 +21,7 @@ export function MobileNav({ isOpen, onClose, onOpen }) {
   return (
     <>
       {/* Toggle Button */}
-      <button 
+      <button
         onClick={onOpen}
         className="lg:hidden p-2 text-white hover:text-[#C0F43C] transition-colors"
         aria-label="Open menu"
