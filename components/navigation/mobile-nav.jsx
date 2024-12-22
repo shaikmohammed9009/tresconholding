@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { useEffect, useState } from 'react';
 import { NavLink } from '@/components/ui/nav-link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Logo } from '@/components/ui/logo';
