@@ -2,14 +2,19 @@
 
 import { VisionContainer } from './vision-container';
 import { VisionHeading } from './vision-heading';
-import { VisionContent } from './vision-content';
+import { VisionText } from './vision-text';
 
 export function VisionSection() {
   return (
-    <section className="relative py-20 overflow-hidden bg-white">
+    <section className="relative py-16 md:py-24 bg-white">
+      <VisionHeading />
       <VisionContainer>
-        <VisionHeading />
-        <VisionContent />
+        
+       
+        <div className="space-y-8 md:space-y-16">
+          
+          <VisionText />
+        </div>
       </VisionContainer>
     </section>
   );

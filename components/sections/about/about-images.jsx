@@ -28,8 +28,8 @@ export function AboutImages() {
         <div className="absolute inset-0 bg-[url('/dots-pattern.png')] opacity-10" />
 
         {/* Decorative circles */}
-        <div className="absolute -top-10 right-0 w-32 h-32 rounded-full bg-[#FFE600]/20 blur-2xl" />
-        <div className="absolute -bottom-10 left-0 w-40 h-40 rounded-full bg-[#7FFF00]/20 blur-2xl" />
+        {/* <div className="absolute -top-10 right-0 w-32 h-32 rounded-full bg-[#FFE600]/20 blur-2xl" />
+        <div className="absolute -bottom-10 left-0 w-40 h-40 rounded-full bg-[#7FFF00]/20 blur-2xl" /> */}
       </div>
     </motion.div>
   );

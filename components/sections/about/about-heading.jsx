@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { motion } from 'framer-motion';
 
@@ -11,16 +11,9 @@ export function AboutHeading() {
       transition={{ duration: 0.6 }}
       className="mb-8"
     >
-      <h2 className="text-[#00A5A3] text-lg font-semibold mb-6">ABOUT</h2>
-      <h3 
-        className="font-['Anek_Devanagari'] text-[60px] font-[500] leading-[66px] text-left"
-        style={{ 
-          textUnderlinePosition: 'from-font',
-          textDecorationSkipInk: 'none'
-        }}
-      >
-        Driving Global Innovation
-      </h3>
+      <h2 className="text-[#00A5A3] text-lg font-semibold mb-6 pb-4 border-b border-[#00A5A3]">
+        ABOUT
+      </h2>
     </motion.div>
   );
 }

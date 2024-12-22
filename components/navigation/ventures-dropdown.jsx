@@ -1,11 +1,17 @@
 "use client";
 
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { ventureItems } from './nav-items';
 
 export function VenturesDropdown() {
   return (
-    <div className="absolute top-full right-0 mt-2 w-64 bg-[#003B3D] rounded-md shadow-lg border border-gray-700 overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 10 }}
+      className="absolute top-full right-0 mt-2 w-64 bg-[#003B3D] rounded-md shadow-lg border border-gray-700 overflow-hidden"
+    >
       <div className="py-2">
         {ventureItems.map((item) => (
           <Link
@@ -17,6 +23,6 @@ export function VenturesDropdown() {
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

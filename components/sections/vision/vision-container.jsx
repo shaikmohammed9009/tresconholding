@@ -1,14 +1,8 @@
-import { LAYOUT_CONSTANTS } from '@/lib/constants';
+"use client";
 
 export function VisionContainer({ children }) {
   return (
-    <div 
-      className="mx-auto w-[850px]"
-      style={{ 
-        paddingLeft: LAYOUT_CONSTANTS.CONTAINER_PADDING.X,
-        paddingRight: LAYOUT_CONSTANTS.CONTAINER_PADDING.X
-      }}
-    >
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       {children}
     </div>
   );

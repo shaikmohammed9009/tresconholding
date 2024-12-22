@@ -1,16 +1,17 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from '@/components/ui/nav-link';
-import { X } from 'lucide-react';
-import { navItems, ventureItems } from './nav-items';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { Logo } from '@/components/ui/logo';
+import { navItems } from './nav-items';
 
-export function MobileNav({ isOpen, onClose }) {
+export function MobileNav({ isOpen, onClose, onOpen }) {
+  const [openDropdown, setOpenDropdown] = useState(null);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
     }
     return () => {
       document.body.style.overflow = '';
@@ -18,47 +19,85 @@ export function MobileNav({ isOpen, onClose }) {
   }, [isOpen]);
 
   return (
-    <div
-      className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}
-    >
-      <div className="absolute inset-0 bg-[#003B3D]">
-        <button
-          onClick={onClose}
-          className="absolute right-6 top-6 text-white hover:text-[#00A5A3] transition-colors"
-          aria-label="Close menu"
-        >
-          <X size={32} />
-        </button>
-        <nav
-          className="h-full flex flex-col items-center justify-center"
-          aria-label="Mobile navigation"
-        >
-          <div className="flex flex-col items-center space-y-8">
-            {navItems.map((item) => (
-              <NavLink 
-                key={item.href} 
-                href={item.href} 
-                onClick={onClose}
-                className="text-2xl hover:text-[#00A5A3] transition-colors"
-              >
-                {item.label}
-              </NavLink>
-            ))}
-            {ventureItems.map((item) => (
-              <NavLink 
-                key={item.href} 
-                href={item.href} 
-                onClick={onClose}
-                className="text-2xl hover:text-[#00A5A3] transition-colors"
-              >
-                {item.label}
-              </NavLink>
-            ))}
+    <>
+      {/* Toggle Button */}
+      <button 
+        onClick={onOpen}
+        className="lg:hidden p-2 text-white hover:text-[#C0F43C] transition-colors"
+        aria-label="Open menu"
+      >
+        <Menu size={24} />
+      </button>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 left-0 w-full sm:w-80 h-[100dvh] transform transition-transform duration-300 ease-in-out z-50 lg:hidden ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="absolute inset-0 bg-[#003B3D]" />
+        <div className="relative h-full flex flex-col">
+          {/* Header */}
+          <div className="h-20 flex items-center justify-between px-6 border-b border-white/10">
+            <Logo />
+            <button
+              onClick={onClose}
+              className="text-white hover:text-[#C0F43C] transition-colors"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
           </div>
-        </nav>
+
+          {/* Navigation */}
+          <nav className="flex-1 overflow-y-auto">
+            <ul className="space-y-2 py-6">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  {item.isDropdown ? (
+                    <div>
+                      <button
+                        onClick={() => setOpenDropdown(openDropdown === item.href ? null : item.href)}
+                        className="w-full px-6 py-3 flex items-center justify-between text-white hover:text-[#C0F43C] transition-colors group"
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown 
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            openDropdown === item.href ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      {openDropdown === item.href && (
+                        <div className="bg-[#002B2D] py-2">
+                          <span className="block px-8 py-2 text-sm text-gray-400">
+                            Coming soon...
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <NavLink
+                      href={item.href}
+                      onClick={onClose}
+                      className="block px-6 py-3 hover:bg-white/5"
+                    >
+                      {item.label}
+                    </NavLink>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
+    </>
   );
 }

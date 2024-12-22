@@ -1,21 +1,25 @@
 "use client";
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
-export function NavLink({ href, children, onClick }) {
-  const pathname = usePathname();
-  const isActive = pathname === href;
-
+export function NavLink({ href, className, children, ...props }) {
   return (
     <Link
       href={href}
-      onClick={onClick}
-      className={`py-2 px-4 font-medium hover:font-semibold text-white hover:text-[#00A5A3] transition-colors ${
-        isActive ? 'font-semibold text-[#00A5A3]' : 'font-medium'
-      }`}
+      className={cn(
+        "relative text-white hover:text-[#C0F43C] transition-colors group",
+        className
+      )}
+      {...props}
     >
-      {children}
+      <span className="relative">
+        {children}
+        <span className={cn(
+          "absolute -bottom-1 left-0 w-full h-0.5 bg-[#C0F43C] transition-transform duration-300",
+          className?.includes('text-[#C0F43C]') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+        )} />
+      </span>
     </Link>
   );
 }
