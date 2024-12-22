@@ -3,11 +3,8 @@ import { LAYOUT_CONSTANTS } from '@/lib/constants';
 export function VisionContainer({ children }) {
   return (
     <div 
-      className="mx-auto w-[850px]"
-      style={{ 
-        paddingLeft: LAYOUT_CONSTANTS.CONTAINER_PADDING.X,
-        paddingRight: LAYOUT_CONSTANTS.CONTAINER_PADDING.X
-      }}
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      
     >
       {children}
     </div>

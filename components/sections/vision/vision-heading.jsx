@@ -14,10 +14,8 @@ export function VisionHeading() {
     >
       <h2 
         id="vision1" 
-        className="text-[#00A5A366] text-lg font-semibold pb-4 border-b border-[#00A5A366] pl-[64px]"
-        style={{ 
-          paddingLeft: LAYOUT_CONSTANTS.CONTAINER_PADDING.DESKTOP
-        }}
+        className="text-[#00A5A366] text-lg font-semibold pb-4 border-b border-[#00A5A366] "
+        
       >
         VISION
       </h2>
