@@ -18,8 +18,8 @@ export default function Home() {
       <StrengthSection />
       <VenturesSection />
       <ImpactNewSection />
-      <MessageSection />
       <GlobalFootprintSection />
+      <MessageSection />
       <AdvisorySection />
       <NewsSection />
     </main>
