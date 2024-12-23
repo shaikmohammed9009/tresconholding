@@ -12,12 +12,13 @@ export function AboutImage() {
       transition={{ duration: 0.8 }}
       className="relative"
     >
-      <div className="relative aspect-square mx-auto">
+      <div className="relative aspect-square  mx-auto">
         <Image
-          src="/member_image.png"
+          src="/Driving_Global_Innovation.jpg"
           alt="About Trescon Holdings"
           fill
-          className=" w-500 h-auto rounded-2xl"
+          className=" !h-[auto] !w-[auto] !sm:w-[500] !sm:h-[100%]  object-cover rounded-2xl"
+          
           priority
         />
 

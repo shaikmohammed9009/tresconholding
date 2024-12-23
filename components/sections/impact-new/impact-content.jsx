@@ -1,7 +1,9 @@
-"use client";
+
+
+    "use client";
 
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 export function ImpactContent() {
@@ -14,18 +16,22 @@ export function ImpactContent() {
       className="space-y-8"
     >
       <h3 
-        className="font-['Anek_Devanagari'] text-[60px] font-[500] leading-[78px] text-left text-[#003B3D]"
+        className="font-['Anek_Devanagari'] text-[60px] font-[500] leading-[78px] text-[#003B3D] text-center lg:text-left"
       >
         Empowering Change, Driving Innovation, and Creating Lasting Impact
       </h3>
       
+      <div className="flex justify-center lg:justify-start">
       <Link
-        href="#"
-        className="inline-flex items-center gap-2 px-6 py-3 bg-[#00A5A3] text-white rounded-md hover:bg-[#00A5A3]/90 transition-colors font-manrope text-base font-semibold"
-      >
-        View Website
-        <ExternalLink className="w-5 h-5" />
-      </Link>
+      href="#"
+      className="inline-flex items-center !text-[20px] line-[30px] mt-20 gap-4 text-[#3F3F3F]  transition-colors font-manrope text-base font-semibold mt-6 group"
+    >
+      View Website
+      <button className=" p-3 rounded-full rounded-full bg-[#00A5A3] text-[#fff]">
+        <ArrowUpRight className="align-[center] w-5 h-5" />
+      </button>
+    </Link>
+      </div>
     </motion.div>
   );
 }
