@@ -10,7 +10,13 @@ export function MessageContent() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="space-y-8"
+      className="space-y-8 relative bg-no-repeat bg-bottom-right h-full"
+      style={{
+        backgroundImage: "url('/chairmanBackground.png')",
+        backgroundPosition: "bottom 0 right 0",
+        backgroundSize: "contain", // or "cover" depending on your needs
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="border-b border-white pb-4">
         <h2 className="font-manrope text-2xl font-bold leading-[32.78px] text-white">
