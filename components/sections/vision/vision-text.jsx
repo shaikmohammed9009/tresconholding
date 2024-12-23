@@ -3,53 +3,43 @@
 import { motion } from 'framer-motion';
 import { VisionWord } from './vision-word';
 import { VisionImage } from './vision-image';
-
+import Image from 'next/image';
 export function VisionText() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="space-y-2 md:space-y-4 md:text-center"
-    >
-      <div className="flex flex-wrap items-center gap-2 md:gap-4 md:justify-center">
-        <span className="text-[32px] text-[#1E2124] md:text-[49px] font-[400] leading-[1.2] md:leading-[88.2px]">
-          We Bring together
-        </span>
-        <div className="flex items-center gap-2 md:gap-4">
-          <VisionImage
+    <div className="text-justify mx-auto max-w-full md:max-w-[850px]">
+      <p className="font-['Anek_Devanagari'] text-[45px] leading-[88.2px] text-[#1E2124] flex flex-wrap items-center">
+        <span>We bring together &nbsp; </span> 
+        <span id="contain2" className="inline-flex items-center">
+          <Image
             src="/vision_image1.png"
-            alt="Visionaries icon"
-            className="w-16 h-16 md:w-20 md:h-20"
+            alt="Vision illustration 1"
+            width={70}
+            height={80}
+            className="mr-4"
           />
-          <VisionWord>Visionaries,</VisionWord>
-        </div>
-      </div>
-
-      <div className="flex flex-wrap items-center gap-2 md:gap-4 md:justify-center">
-        <div className="flex items-center gap-2 md:gap-4">
-          <VisionWord>innovators,</VisionWord>
-          <VisionImage
+          <VisionWord id="vision3" className="font-semibold">visionaries</VisionWord>
+        </span>,{' '}
+        <span id="contain3" className="inline-flex items-center">
+          <Image
             src="/vision_image2.png"
-            alt="Innovators icon"
-            className="w-16 h-16 md:w-20 md:h-20"
+            alt="Vision illustration 2"
+            width={70}
+            height={80}
+            className="mx-4"
           />
-        </div>
-        <span>&</span>
-        <div className="flex items-center gap-2 md:gap-4">
-          <VisionImage
+          <VisionWord id="vision4" className="font-semibold">innovators</VisionWord>
+        </span>, &{' '} 
+        <span id="contain4" className="inline-flex items-center">
+          <Image
             src="/vision_image3.png"
-            alt="Game-changers icon"
-            className="w-16 h-16 md:w-20 md:h-20"
+            alt="Vision illustration 3"
+            width={70}
+            height={80}
+            className="mx-4"
           />
-          <VisionWord>game-changers,</VisionWord>
-        </div>
-      </div>
-
-      <div className="text-[32px] md:text-[49px] font-[400] leading-[1.2] md:leading-[88.2px] text-left md:text-justify md:text-center text-[#1E2124]">
-        <VisionWord>fueling ventures</VisionWord> that shape the future across industries and geographies.
-      </div>
-    </motion.div>
+          <VisionWord id="vision4" className="font-semibold">game-changers,</VisionWord>
+        </span>and fueling ventures that shape the future across industries and geographies.
+      </p>
+    </div>
   );
 }
