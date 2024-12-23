@@ -9,10 +9,9 @@ export function VenturesHeader() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
+      className="lg:mb-0"
     >
-      <h2 
-        className="text-[#00A5A3] text-lg font-semibold pb-4 border-b border-[#00A5A3]"
-      >
+      <h2 className="text-[#00A5A3] text-lg font-semibold pb-4 border-b border-[#00A5A3]">
         VENTURES & PORTFOLIO COMPANIES
       </h2>
     </motion.div>

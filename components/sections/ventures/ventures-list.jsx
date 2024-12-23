@@ -1,34 +1,46 @@
-"use client";
+'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { ventures } from './ventures-data';
+import { VentureButton } from './components/venture-button';
+import { VentureTitle } from './components/venture-title';
 
-export function VenturesList({ currentIndex }) {
+export function VenturesList({ currentIndex, onVentureClick }) {
   return (
     <div className="space-y-6">
-      <AnimatePresence mode="wait">
+      {/* <div className="space-y-4">
         {ventures.map((venture, index) => (
-          <motion.div
+          <button
             key={venture.id}
+            onClick={() => onVentureClick(index)}
+            className={`w-full text-left text-xl font-semibold transition-colors ${
+              index === currentIndex ? 'text-[#C0F43C]' : 'text-white/60'
+            } hover:text-[#C0F43C]`}
+          >
+            {venture.title}
+          </button>
+        ))}
+      </div> */}
+
+      <div className="space-y-4">
+        <VentureTitle title={ventures[currentIndex].title} />
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ 
-              opacity: index === currentIndex ? 1 : 0.5,
-              y: 0,
-              scale: index === currentIndex ? 1 : 0.98
-            }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="space-y-2"
+            className="space-y-4"
           >
-            <h4 className={`font-['Anek_Devanagari'] text-[24px] font-[500] text-white transition-colors duration-300`}>
-              {venture.title}
-            </h4>
-            <p className={`font-['Manrope'] text-[16px] font-[400] leading-[24px] text-white/80 transition-colors duration-300`}>
-              {venture.description}
+            <p className="text-white/80 text-base leading-relaxed">
+              {ventures[currentIndex].description}
             </p>
+            <VentureButton />
           </motion.div>
-        ))}
-      </AnimatePresence>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
