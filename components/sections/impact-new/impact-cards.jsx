@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { impactCards } from './impact-data';
+import { impactCards } from '../impact-new/impact-data';
 
 export function ImpactCards() {
   return (

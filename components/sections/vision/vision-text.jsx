@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { VisionWord } from './vision-word';
 import { VisionImage } from './vision-image';
-
+import Image from 'next/image';
 export function VisionText() {
   return (
     <motion.div
