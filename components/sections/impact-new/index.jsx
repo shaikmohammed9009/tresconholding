@@ -7,7 +7,7 @@ import { ImpactCards } from './impact-cards';
 
 export function ImpactNewSection() {
   return (
-    <section id="our-impact" className="bg-white pb-0 py-24">
+    <section id="our-impact" className="bg-white pb-0 py-24" style={{marginBottom:"-84px"}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div className="space-y-8 text-center lg:text-left">
