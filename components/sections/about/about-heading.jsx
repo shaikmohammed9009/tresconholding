@@ -16,15 +16,7 @@ export function AboutHeading() {
       >
         ABOUT
       </h2>
-      <h3 
-        className="font-['Anek_Devanagari'] text-[60px] font-[500] leading-[66px] text-left text-[#1E2124]"
-        style={{ 
-          textUnderlinePosition: 'from-font',
-          textDecorationSkipInk: 'none'
-        }}
-      >
-        Driving Global Innovation
-      </h3>
+   
     </motion.div>
   );
 }

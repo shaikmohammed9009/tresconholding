@@ -12,7 +12,7 @@ export function StrengthHeading() {
       className="mb-8"
     >
       <h2 
-        className="text-[#00A5A366] text-lg font-semibold mb-6 pb-4 border-b border-[#00A5A366]"
+        className="text-[#00A5A366]  text-[24px] leading-[32.78px] font-semibold mb-6 pb-4 border-b border-[#00A5A366]"
       >
         OUR STRENGTH
       </h2>
