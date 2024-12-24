@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight ,ArrowLeft, ArrowRight } from 'lucide-react';
 import { NewsCard } from './news-card';
 
 export function NewsCarousel({ items }) {
@@ -29,17 +29,17 @@ export function NewsCarousel({ items }) {
         <div className="flex justify-end space-x-4 mb-6">
           <button
             onClick={prevSlide}
-            className="p-2 rounded-full border border-[#00A5A3] hover:bg-[#00A5A3] hover:text-white transition-colors"
+            className="p-2 rounded-full border border-[#C0F43C] hover:bg-[#A0D12D] bg-[#C0F43C] hover:text-white transition-colors"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5 text-black" />
           </button>
           <button
             onClick={nextSlide}
-            className="p-2 rounded-full border border-[#00A5A3] hover:bg-[#00A5A3] hover:text-white transition-colors"
+            className="p-2 rounded-full border border-[#C0F43C] hover:bg-[#A0D12D] bg-[#C0F43C] hover:text-white transition-colors"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 text-black" />
           </button>
         </div>
       )}
