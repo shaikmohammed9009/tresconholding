@@ -18,7 +18,7 @@ export function ImpactImage() {
         {/* Main image */}
         <div className="relative w-full h-full rounded-full overflow-hidden">
           <Image
-            src="/Video.png"
+            src="/full_image.png"
             alt="Our Impact Visualization"
             fill
             className="object-cover"
