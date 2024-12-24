@@ -26,9 +26,9 @@ export function AboutContent() {
           textDecorationSkipInk: 'none'
         }}
       >
-        Trescon Holdings stands at the forefront of technological advancement and business 
-        transformation. Through our portfolio of innovative ventures, we're creating meaningful 
-        impact across global markets.
+        Trescon Holdings stands at the forefront of<br/> technological advancement and business <br/>
+        transformation. Through our portfolio of innovative <br/> ventures, we're creating meaningful 
+        impact across <br/> global markets.
       </p>
     </motion.div>
   );

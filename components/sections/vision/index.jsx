@@ -1,8 +1,8 @@
 "use client";
 
-import { VisionContainer } from './vision-container';
-import { VisionHeading } from './vision-heading';
-import { VisionText } from './vision-text';
+import { VisionContainer } from "./vision-container";
+import { VisionHeading } from "./vision-heading";
+import { VisionText } from "./vision-text";
 
 export function VisionSection() {
   return (
@@ -11,7 +11,8 @@ export function VisionSection() {
       <VisionContainer>
         
        
-        <div className="space-y-8 md:space-y-16">
+     
+      <div className="space-y-9 md:space-y-18">
           
           <VisionText />
         </div>

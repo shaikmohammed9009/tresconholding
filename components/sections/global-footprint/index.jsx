@@ -11,10 +11,10 @@ export function GlobalFootprintSection() {
   const [activeLocationId, setActiveLocationId] = useState('dubai');
 
   return (
-    <section id="our-global-footprint" className="bg-[#1E2124] py-24">
+    <section id="our-global-footprint" className="bg-[#1E2124] py-24"  style={{marginBottom:"-84px"}}>
       <GlobalFootprintContainer>
         <GlobalFootprintHeader />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-12 pb-32">
           <LocationsList 
             activeLocationId={activeLocationId} 
             onLocationSelect={setActiveLocationId} 

@@ -8,6 +8,7 @@ import { ImpactNewSection } from '@/components/sections/impact-new';
 import { GlobalFootprintSection } from '@/components/sections/global-footprint';
 import { AdvisorySection } from '@/components/sections/advisory';
 import { NewsSection } from '@/components/sections/news';
+import { MessageSection } from '@/components/sections/message';
 
 export default function Home() {
   return (
@@ -18,8 +19,10 @@ export default function Home() {
       <StrengthSection />
       <VenturesSection />
       <ImpactNewSection />
+      
       {/* <MessageSection /> */}
       <GlobalFootprintSection />
+      <MessageSection />
       <AdvisorySection />
       <NewsSection />
     </main>
