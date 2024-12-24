@@ -13,10 +13,10 @@ export function NewsTabs({ activeTab, setActiveTab }) {
           key={tab}
           onClick={() => setActiveTab(tab)}
           className={cn(
-            "px-4 py-2 rounded-full transition-colors",
+            "px-4 py-2 rounded-full transition-colors w-[115px]",
             activeTab === tab 
-              ? "bg-[#00A5A3] text-white" 
-              : "text-gray-600 hover:text-[#00A5A3]"
+              ? "bg-[#01373D] text-white" 
+              : "text-gray-600 hover:text-[#01373D] border border-[#00A5A3]"
           )}
         >
           {tab}

@@ -5,7 +5,7 @@ export const newsItems = [
     title: 'Why Must Businesses Pay Off Their Technical Debt?',
     author: 'Mark Weaser',
     date: 'November 28, 2024',
-    image: '/game_image.png'
+    image: '/venture_image.png'
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const newsItems = [
     title: 'The Indian AI market is on the cusp of global dominance',
     author: 'Eros Santiago',
     date: 'November 28, 2024',
-    image: '/impact_image.png'
+    image: '/venture_image.png'
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const newsItems = [
     title: 'The Future of AI in Enterprise Solutions',
     author: 'Sarah Chen',
     date: 'November 27, 2024',
-    image: '/about_image.png'
+    image: '/venture_image.png'
   },
   {
     id: 5,
@@ -37,6 +37,6 @@ export const newsItems = [
     title: 'Global Tech Summit 2024 Announces Keynote Speakers',
     author: 'Michael Roberts',
     date: 'November 26, 2024',
-    image: '/game_image2.png'
+    image: '/venture_image.png'
   }
 ];
