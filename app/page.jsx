@@ -4,7 +4,7 @@ import { AboutSection } from '@/components/sections/about';
 import { StrengthSection } from '@/components/sections/strength';
 import { VenturesSection } from '@/components/sections/ventures';
 import { ImpactNewSection } from '@/components/sections/impact-new';
-// import { MessageSection } from '@/components/sections/message';
+import { MessageSection } from '@/components/sections/message';
 import { GlobalFootprintSection } from '@/components/sections/global-footprint';
 import { AdvisorySection } from '@/components/sections/advisory';
 import { NewsSection } from '@/components/sections/news';
@@ -20,6 +20,7 @@ export default function Home() {
       <ImpactNewSection />
       {/* <MessageSection /> */}
       <GlobalFootprintSection />
+      <MessageSection />
       <AdvisorySection />
       <NewsSection />
     </main>

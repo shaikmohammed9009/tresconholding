@@ -12,13 +12,13 @@ export function MessageImage() {
       transition={{ duration: 0.8 }}
       className="relative"
     >
-      <div className="relative aspect-[1] rounded-lg overflow-hidden">
+      <div className="relative aspect-[0.9]  overflow-hidden w-auto" >
         <Image
           src="/saleem.png"
           alt="Mohammed Saleem - Founder & CEO"
-          fill
           className="object-cover"
           priority
+          fill
         />
         
         {/* Decorative elements */}

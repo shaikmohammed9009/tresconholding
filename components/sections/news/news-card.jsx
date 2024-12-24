@@ -25,7 +25,7 @@ export function NewsCard({ item, index }) {
         </div>
       </div>
       
-      <div className="p-6">
+      <div className="p-6 bg-[#fffee8]">
         <p className="text-sm text-gray-600 mb-2">{item.date}</p>
         <h3 className="text-xl font-semibold text-gray-900 mb-4 line-clamp-2">
           {item.title}
