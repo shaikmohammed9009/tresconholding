@@ -18,7 +18,7 @@ export function VideoPlayer() {
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="relative w-[60%] h-[60%]">
         {/* Color circle overlay */}
-        <div className="absolute top-[0.5rem] right-[2.5rem] w-10 h-10 z-10">
+        <div className="absolute sm:top-[19px] sm:right-[64px]   md:top-[38px] md:right-[39px]  lg:top-[17px] lg:right-[29px]    top-[5px] right-[18px]  w-10 h-10 z-10">
           <Image
             src="/color_circle.png"
             alt="Decorative circle"

@@ -12,6 +12,11 @@ module.exports = {
         manrope: ['Manrope', 'sans-serif'],
         'anek-devanagari': ['Anek Devanagari', 'sans-serif'],
       },
+
+      fontSize: {
+        'xxs': '0.625rem',
+        'xxl': '1.75rem',
+    },
       animation: {
         'spin-slow': 'spin 20s linear infinite',
       },

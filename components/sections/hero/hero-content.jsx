@@ -3,7 +3,7 @@
 export function HeroContent() {
   return (
     <div className="">
-      <h1 className="font-['Anek_Devanagari'] text-[65px] font-bold leading-[70px] tracking-[-0.02em] mb-4">
+      <h1 className="font-['Anek_Devanagari'] text-[35px] leading-[42px] md:text-[65px] font-bold md:leading-[70px] tracking-[-0.02em] mb-4">
         <span className="block">Building</span>
         <span className="font-normal">
           Tomorrow&apos;s<br />
