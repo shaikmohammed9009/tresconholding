@@ -20,15 +20,15 @@ export function AboutContent() {
         Driving Global Innovation
       </h3>
       <p 
-        className="font-['Manrope'] text-[22px] font-[400] leading-[39.6px] text-left text-[#1E2124]"
+        className="font-['Manrope'] text-[22px] font-[400] leading-[39.6px] text-left text-[#464D53]"
         style={{ 
           textUnderlinePosition: 'from-font',
           textDecorationSkipInk: 'none'
         }}
       >
-        Trescon Holdings stands at the forefront of technological advancement and business 
-        transformation. Through our portfolio of innovative ventures, we're creating meaningful 
-        impact across global markets.
+        Trescon Holdings stands at the forefront of<br/> technological advancement and business <br/>
+        transformation. Through our portfolio of innovative <br/> ventures, we're creating meaningful 
+        impact across <br/> global markets.
       </p>
     </motion.div>
   );

@@ -20,6 +20,7 @@ export default function Home() {
       <ImpactNewSection />
       {/* <MessageSection /> */}
       <GlobalFootprintSection />
+      <MessageSection />
       <AdvisorySection />
       <NewsSection />
     </main>

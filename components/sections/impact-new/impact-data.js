@@ -12,6 +12,6 @@ export const impactCards = [
   {
     id: 'social-impact',
     title: 'Delivering Social Impact',
-    image: '/impact_image.png'
+    image: '/game_image2.png'
   }
 ];

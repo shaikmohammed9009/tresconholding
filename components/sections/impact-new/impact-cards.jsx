@@ -16,7 +16,7 @@ export function ImpactCards() {
           transition={{ duration: 0.5, delay: index * 0.1 }}
           className="group relative overflow-hidden rounded-lg"
         >
-          <div className="relative aspect-[4/3]">
+          <div className="relative aspect-[5/3]">
             <Image
               src={card.image}
               alt={card.title}
@@ -33,7 +33,7 @@ export function ImpactCards() {
             </div>
             
             {/* Decorative dot */}
-            <div className="absolute top-4 right-4 w-6 h-6 bg-[#C0F43C] rounded-full" />
+            {/* <div className="absolute top-4 right-4 w-6 h-6 bg-[#C0F43C] rounded-full" /> */}
           </div>
         </motion.div>
       ))}
