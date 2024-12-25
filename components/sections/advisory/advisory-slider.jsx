@@ -25,7 +25,7 @@ export function AdvisorySlider() {
       transition={{ duration: 0.8 }}
       className="relative"
     >
-      <div className="relative aspect-square max-w-[500px] mx-auto">
+      <div className="relative aspect-square max-w-[300px] mx-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -69,7 +69,7 @@ export function AdvisorySlider() {
           </button>
           <button
             onClick={nextSlide}
-            className="p-3 rounded-full bg-[#00A5A3] hover:bg-[#00A5A3]/90 transition-colors"
+            className="p-3 rounded-full bg-[#C0F43C] hover:bg-[#C0F43C]/90 transition-colors"
             aria-label="Next slide"
           >
             <ChevronRight className="w-6 h-6 text-white" />
