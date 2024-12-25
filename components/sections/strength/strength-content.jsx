@@ -11,7 +11,7 @@ export function StrengthContent() {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
       <p 
-        className="font-['Manrope'] text-[20px] font-[400] leading-[36px] text-left text-[#464D53]"
+        className="font-['Manrope'] text-[18px] sm:text-[18px] font-[400] sm:leading-[36px] leading-[26px] text-left text-[#464D53]"
         style={{ 
           textUnderlinePosition: 'from-font',
           textDecorationSkipInk: 'none'

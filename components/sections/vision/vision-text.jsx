@@ -14,7 +14,7 @@ export function VisionText() {
             className="space-y-2 md:space-y-4 text-left"
           >
             <div className="flex items-center gap-2 md:gap-4">
-              <span className="text-[30px] text-[#1E2124] md:text-[47px] font-[400] leading-[1.2]">
+              <span className="text-[22px] text-[#1E2124] md:text-[47px] font-[400] leading-[1.2]">
                 We Bring together
               </span>
               <div className="flex items-center gap-2 md:gap-4">
@@ -41,14 +41,14 @@ export function VisionText() {
                 <VisionImage
                   src="/vision_image3.png"
                   alt="Game-changers icon"
-                  className="w-16 h-16 md:w-20 md:h-20"
+                  className="w-[3] h-[4rem] md:w-20 md:h-20"
                 />
                 <VisionWord>game-changers,</VisionWord>
               </div>
             </div>
 
             {/* Updated text container */}
-            <div className="text-[30px] md:text-[47px] font-[400] leading-[1.4] md:leading-[1.6] text-[#1E2124] max-w-[90%] md:max-w-[80%] whitespace-nowrap">
+            <div className="text-[19px] md:text-[47px] font-[400] leading-[1.4] md:leading-[1.6] text-[#1E2124] max-w-[90%] md:max-w-[80%] whitespace-nowrap">
               <VisionWord>fueling ventures</VisionWord> that shape the <br></br>{" "}
               future across industries and geographies.
             </div>
