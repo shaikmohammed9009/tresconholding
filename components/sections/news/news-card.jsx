@@ -13,7 +13,7 @@ export function NewsCard({ item, index }) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative bg-white rounded-lg overflow-hidden shadow-lg"
     >
-      <div className="relative h-48 sm:h-64">
+      <div className="relative  h-48 sm:h-64">
         <Image
           src={item.image}
           alt={item.title}

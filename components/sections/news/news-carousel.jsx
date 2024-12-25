@@ -2,12 +2,22 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight ,ArrowLeft, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { NewsCard } from './news-card';
+import { useWindowSize } from '../../../hooks/useWindowSize';
 
 export function NewsCarousel({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3;
+  const { width } = useWindowSize();
+  
+  // Determine items per page based on screen size
+  const getItemsPerPage = () => {
+    if (width >= 1024) return 3; // desktop
+    if (width >= 768) return 2;  // tablet
+    return 1; // mobile
+  };
+
+  const itemsPerPage = getItemsPerPage();
   const totalPages = Math.ceil(items.length / itemsPerPage);
 
   const nextSlide = () => {
@@ -29,17 +39,17 @@ export function NewsCarousel({ items }) {
         <div className="flex justify-end space-x-4 mb-6">
           <button
             onClick={prevSlide}
-            className="p-2 rounded-full border border-[#C0F43C] hover:bg-[#A0D12D] bg-[#C0F43C] hover:text-white transition-colors"
+            className="p-2 rounded-full border bg-[#C0F43C] border-[#C0F43C] hover:bg-[#C0F43C] hover:text-white transition-colors"
             aria-label="Previous slide"
           >
-            <ArrowLeft className="w-5 h-5 text-black" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="p-2 rounded-full border border-[#C0F43C] hover:bg-[#A0D12D] bg-[#C0F43C] hover:text-white transition-colors"
+            className="p-2 rounded-full border bg-[#C0F43C] border-[#C0F43C] hover:bg-[#C0F43C] hover:text-white transition-colors"
             aria-label="Next slide"
           >
-            <ArrowRight className="w-5 h-5 text-black" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       )}
@@ -47,10 +57,9 @@ export function NewsCarousel({ items }) {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          exit={{ opacity: 0, x: -50 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {currentItems.map((item, index) => (

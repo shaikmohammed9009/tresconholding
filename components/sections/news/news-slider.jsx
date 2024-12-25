@@ -31,14 +31,14 @@ export function NewsSlider() {
         <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex space-x-4">
           <button
             onClick={prevPage}
-            className="p-3 rounded-full bg-[#00A5A3] hover:bg-[#00A5A3]/90 transition-colors"
+            className="p-3 rounded-full bg-[#C0F43C] hover:bg-[#C0F43C]/90 transition-colors"
             aria-label="Previous page"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={nextPage}
-            className="p-3 rounded-full bg-[#00A5A3] hover:bg-[#00A5A3]/90 transition-colors"
+            className="p-3 rounded-full bg-[#C0F43C] hover:bg-[#C0F43C]/90 transition-colors"
             aria-label="Next page"
           >
             <ChevronRight className="w-6 h-6 text-white" />
