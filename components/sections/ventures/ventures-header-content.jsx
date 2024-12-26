@@ -10,7 +10,7 @@ export function VenturesHeaderContent() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="font-['Anek_Devanagari'] text-[60px] font-[500] leading-[78px] text-white order-1 lg:order-1 lg:max-w-[50%]"
+        className="font-['Anek_Devanagari'] text-[34px] text-[35px] md:text-[60px] font-[500] sm:leading-[78px] text-white order-1 lg:order-1 lg:max-w-[50%]"
       >
         Driving Innovation, Empowering Industries
       </motion.h3>

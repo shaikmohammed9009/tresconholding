@@ -7,7 +7,7 @@ import { MessageImage } from './message-image';
 export function MessageSection() {
   return (
     <section
-  className=" bg-white"
+  className="-mt-[300px]"
   style={{
     // background: "linear-gradient(104.88deg, #01373D 10.45%, #015153 89.47%)",
   }}

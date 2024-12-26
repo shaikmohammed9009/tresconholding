@@ -11,7 +11,7 @@ export function ImpactHeader() {
       transition={{ duration: 0.6 }}
     >
       <h2 
-        className="font-manrope text-[24px] font-bold leading-[32.78px] text-[#00A5A3] text-left pb-4 mb-20 border-b border-[#00A5A3]"
+        className="font-manrope text-[18px] md:text-[24px] font-bold leading-[32.78px] text-[#00A5A3] text-left pb-4 mb-20 border-b border-[#00A5A3]"
       >
         OUR IMPACT
       </h2>

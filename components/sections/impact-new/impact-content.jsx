@@ -16,7 +16,7 @@ export function ImpactContent() {
       className="space-y-8"
     >
       <h3 
-        className="font-['Anek_Devanagari'] text-[60px] font-[500] leading-[78px] text-[#003B3D] text-center lg:text-left"
+        className="font-['Anek_Devanagari'] text-[38px] text-left md:text-left md:text-[60px] font-[500] leading-[45px] md:leading-[78px] text-[#003B3D]  lg:text-left"
       >
         Empowering Change, Driving Innovation, and Creating Lasting Impact
       </h3>

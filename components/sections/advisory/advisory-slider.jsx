@@ -3,10 +3,44 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { advisoryMembers } from './advisory-data';
 
 export function AdvisorySlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % advisoryMembers.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + advisoryMembers.length) % advisoryMembers.length);
+  };
+
+  // Calculate visible cards based on screen size
+  const getVisibleCards = () => {
+    const cards = [];
+    const cardsToShow = {
+      base: 1, // mobile
+      md: 2,  // tablet
+      lg: 1 // desktop
+    };
+
+    // Get window width using client-side check
+    const isClient = typeof window !== 'undefined';
+    const width = isClient ? window.innerWidth : 0;
+    
+    let numCards = cardsToShow.base;
+    if (width >= 1024) numCards = cardsToShow.lg;
+    else if (width >= 768) numCards = cardsToShow.md;
+
+    for (let i = 0; i < numCards; i++) {
+      const index = (currentIndex + i) % advisoryMembers.length;
+      cards.push(advisoryMembers[index]);
+    }
+
+    return cards;
+  };
 
   return (
     <motion.div
@@ -16,7 +50,7 @@ export function AdvisorySlider() {
       transition={{ duration: 0.8 }}
       className="relative"
     >
-      <div className="relative aspect-[2/3] max-w-[300px] mx-auto">
+     <div className="relative aspect-[2/3] max-w-[300px] mx-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -50,6 +84,24 @@ export function AdvisorySlider() {
         </AnimatePresence>
 
    
+      </div>
+
+      {/* Navigation buttons */}
+      <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex space-x-4">
+        <button
+          onClick={prevSlide}
+          className="p-3 rounded-full bg-[#C0F43C] hover:bg-[#C0F43C]/90 transition-colors"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-6 h-6 text-white" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="p-3 rounded-full bg-[#C0F43C] hover:bg-[#C0F43C]/90 transition-colors"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-6 h-6 text-white" />
+        </button>
       </div>
     </motion.div>
   );

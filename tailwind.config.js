@@ -11,6 +11,10 @@ module.exports = {
       fontFamily: {
         manrope: ['Manrope', 'sans-serif'],
         'anek-devanagari': ['Anek Devanagari', 'sans-serif'],
+        backgroundImage: {
+          'hero-pattern': "url('./public/saleem.png')",
+         
+        }
       },
 
       fontSize: {

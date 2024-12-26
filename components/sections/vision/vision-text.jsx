@@ -11,10 +11,10 @@ export function VisionText() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-2 md:space-y-4 text-left"
+            className="space-y-2 md:space-y-4 text-left "
           >
             <div className="flex items-center gap-2 md:gap-4">
-              <span className="text-[22px] text-[#1E2124] md:text-[47px] font-[400] leading-[1.2]">
+              <span className="text-[25px] sm:text-[29px] text-[#1E2124] md:text-[47px] font-[400] leading-[1.2]">
                 We Bring together
               </span>
               <div className="flex items-center gap-2 md:gap-4">
@@ -48,7 +48,7 @@ export function VisionText() {
             </div>
 
             {/* Updated text container */}
-            <div className="text-[19px] md:text-[47px] font-[400] leading-[1.4] md:leading-[1.6] text-[#1E2124] max-w-[90%] md:max-w-[80%] whitespace-nowrap">
+            <div className="text-[25px] md:text-[47px] font-[400] leading-[1.4] md:leading-[1.6] text-[#1E2124] max-w-[90%] md:max-w-[80%] whitespace-nowrap">
               <VisionWord>fueling ventures</VisionWord> that shape the <br></br>{" "}
               future across industries and geographies.
             </div>

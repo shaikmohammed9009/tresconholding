@@ -10,7 +10,7 @@ export function VisionSection() {
       
       <VisionContainer>
       <VisionHeading />
-        <div className="space-y-9 md:space-y-18">
+        <div className="space-y-9 md:space-y-18 md:w-[52rem] md:mx-auto">
           <VisionText />
         </div>
       </VisionContainer>
