@@ -8,6 +8,7 @@ import { MessageSection } from '@/components/sections/message';
 import { GlobalFootprintSection } from '@/components/sections/global-footprint';
 import { AdvisorySection } from '@/components/sections/advisory';
 import { NewsSection } from '@/components/sections/news';
+// import Message from '@/components/sections/Message_folder';
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
       {/* <MessageSection /> */}
       <GlobalFootprintSection />
       <MessageSection />
+
+      {/* <Message /> */}
       <AdvisorySection />
       <NewsSection />
     </main>
