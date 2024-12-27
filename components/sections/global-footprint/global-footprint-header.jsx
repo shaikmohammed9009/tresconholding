@@ -11,7 +11,7 @@ export function GlobalFootprintHeader() {
       transition={{ duration: 0.6 }}
       className="space-y-4"
     >
-      <h3 className="font-manrope text-base font-normal leading-6 text-white">
+      <h3 className="font-manrope text-base font-normal leading-6 py-4 border-y-[1px] border-[#fff] pt-[10rem] text-white">
         Our Locations
       </h3>
       <h2 className="font-manrope text-4xl font-bold leading-[48px] text-white">
