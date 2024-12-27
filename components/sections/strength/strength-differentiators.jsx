@@ -14,7 +14,7 @@ export function StrengthDifferentiators() {
         transition={{ duration: 0.6 }}
       >
         <h3 
-          className="font-['Manrope'] text-[24px] font-[700] leading-[32.78px] text-left text-[#00A5A3] pb-4 border-b border-[#00A5A3] mb-8"
+          className="font-['Manrope'] text-[24px] font-[700] leading-[32.78px] text-left text-[#00A5A3] pb-4 border-b border-[#00A5A3] mb-6"
           style={{ 
             textUnderlinePosition: 'from-font',
             textDecorationSkipInk: 'none'

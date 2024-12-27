@@ -7,13 +7,25 @@
   --background-rgb: 0, 59, 61;
 }
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  box-sizing: border-box;
+     outline: none;
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  background: #ffffff !important;
+  
 }
 
 @layer base {
   html {
     font-family: 'Anek Devanagari', system-ui, sans-serif;
-  }
+     
+     
+     background-color: #ffffff!important; }
 }

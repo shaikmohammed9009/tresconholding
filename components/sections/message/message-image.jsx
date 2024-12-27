@@ -21,9 +21,7 @@ export function MessageImage() {
           fill
         />
         
-        {/* Decorative elements */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#003B3D]/80 to-transparent" />
-        <div className="absolute top-4 right-4 w-24 h-24 rounded-full bg-[#00A5A3]/20 blur-xl" />
+       
       </div>
     </motion.div>
   );

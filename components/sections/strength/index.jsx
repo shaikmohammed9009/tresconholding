@@ -8,7 +8,7 @@ import { Background } from './background';
 
 export function StrengthSection() {
   return (
-    <section className="relative pt-0 py-24 bg-[#ffffff]" id="outsrengthandkey">
+    <section className="relative  pb-[10rem] pt-[10rem]   bg-[#ffffff]" id="outsrengthandkey">
       <StrengthContainer>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>

@@ -7,7 +7,7 @@ import { AboutImage } from './about-image';
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative bg-white">
+    <section id="about" className="relative  pt-[6rem] border-[none]  bg-white">
       <AboutContainer>
         <AboutHeading />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

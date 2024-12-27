@@ -11,17 +11,17 @@ export function VisionText() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-2 md:space-y-4 text-left "
+            className="space-y-1 md:space-y-4 text-left "
           >
             <div className="flex items-center gap-2 md:gap-4">
-              <span className="text-[25px] sm:text-[29px] text-[#1E2124] md:text-[47px] font-[400] leading-[1.2]">
+              <span className="text-[18px] sm:text-[32px] text-[#1E2124] md:text-[47px] font-[400] leading-[1.2]">
                 We Bring together
               </span>
               <div className="flex items-center gap-2 md:gap-4">
                 <VisionImage
                   src="/vision_image1.png"
                   alt="Visionaries icon"
-                  className="w-16 h-16 md:w-20 md:h-20"
+                  className="w-[3rem] h-[4rem] md:w-20 md:h-20"
                 />
                 <VisionWord>Visionaries,</VisionWord>
               </div>
@@ -33,7 +33,7 @@ export function VisionText() {
                 <VisionImage
                   src="/vision_image2.png"
                   alt="Innovators icon"
-                  className="w-16 h-16 md:w-20 md:h-20"
+                  className="w-[3rem] h-[4rem] md:w-20 md:h-20"
                 />
               </div>
               <span>&</span>
@@ -41,14 +41,14 @@ export function VisionText() {
                 <VisionImage
                   src="/vision_image3.png"
                   alt="Game-changers icon"
-                  className="w-[3] h-[4rem] md:w-20 md:h-20"
+                  className="w-[3rem] h-[4rem] md:w-20 md:h-20"
                 />
                 <VisionWord>game-changers,</VisionWord>
               </div>
             </div>
 
             {/* Updated text container */}
-            <div className="text-[25px] md:text-[47px] font-[400] leading-[1.4] md:leading-[1.6] text-[#1E2124] max-w-[90%] md:max-w-[80%] whitespace-nowrap">
+            <div className="text-[20px] md:text-[47px] font-[400] leading-[1.4] md:leading-[1.6] text-[#1E2124] max-w-[90%] md:max-w-[80%] whitespace-nowrap">
               <VisionWord>fueling ventures</VisionWord> that shape the <br></br>{" "}
               future across industries and geographies.
             </div>

@@ -6,7 +6,7 @@ import { HeroMedia } from './hero-media';
 
 export function HeroSection() {
   return (
-    <section className="relative pt-20">
+    <section className="relative pt-20 border-b-[0px] bg-[#003B3D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>

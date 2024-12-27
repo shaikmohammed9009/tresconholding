@@ -10,7 +10,7 @@ export function HeroContent() {
           Business Ecosystem
         </span>
       </h1>
-      <p className="text-lg mb-8">
+      <p className="text-lg mb-8 text-[18px]  md:text-[22px]">
         A global enterprise nurturing innovative ventures across technology,
         digital transformation, and sustainability
       </p>

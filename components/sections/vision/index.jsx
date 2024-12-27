@@ -6,7 +6,7 @@ import { VisionText } from "./vision-text";
 
 export function VisionSection() {
   return (
-    <section className="relative py-16 md:py-14 bg-white">
+    <section className="relative py-12 md:py-14 bg-white shadow-0 !border-0">
       
       <VisionContainer>
       <VisionHeading />
