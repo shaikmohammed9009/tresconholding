@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ArrowLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { NewsCard } from './news-card';
 import { newsItems } from './news-data';
 
@@ -34,14 +34,14 @@ export function NewsSlider() {
             className="p-3 rounded-full bg-[#C0F43C] hover:bg-[#C0F43C]/90 transition-colors"
             aria-label="Previous page"
           >
-            <ChevronLeft className="w-6 h-6 text-white" />
+            <ArrowLeft className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={nextPage}
             className="p-3 rounded-full bg-[#C0F43C] hover:bg-[#C0F43C]/90 transition-colors"
             aria-label="Next page"
           >
-            <ChevronRight className="w-6 h-6 text-white" />
+            <ArrowRight className="w-6 h-6 text-white" />
           </button>
         </div>
       )}

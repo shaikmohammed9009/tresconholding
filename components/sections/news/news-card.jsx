@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight ,ArrowUpRight} from 'lucide-react';
 
 export function NewsCard({ item, index }) {
   return (
@@ -20,21 +20,30 @@ export function NewsCard({ item, index }) {
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="absolute top-4 left-4 px-3 py-1 bg-[#E4FF40] rounded-full">
-          <span className="text-sm font-semibold text-[#003B3D]">{item.category}</span>
+        <div className="absolute top-4 left-4 flex items-center space-x-2">
+          
+          <div className="px-3 py-1 bg-[#E4FF40] rounded-full">
+            <span style={{ fontSize: '0.875rem', fontWeight: '600', color: '#003B3D' }}>
+              {item.category}
+            </span>
+          </div>
         </div>
       </div>
       
       <div className="p-6 bg-[#fffee8]">
         <p className="text-sm text-gray-600 mb-2">{item.date}</p>
-        <h3 className="text-xl font-semibold text-gray-900 mb-4 line-clamp-2">
+        <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
           {item.title}
         </h3>
         <p className="text-sm text-gray-600 mb-4">{item.author}</p>
-        
-        <button className="inline-flex items-center text-[#00A5A3] hover:text-[#00A5A3]/80 transition-colors">
-          Read More
-          <ArrowRight className="ml-2 w-4 h-4" />
+        {/* <button className=" p-3 rounded-full rounded-full bg-[#00A5A3] text-[#fff]">
+        <ArrowUpRight className="align-[center] w-5 h-5" />
+      </button> */}
+        <button className="inline-flex mt-6 items-center text-[#3F3F3F] hover:text-[#000]/100 transition-colors">
+          Read More 
+          <span className="w-15 h-15 p-2 ml-3 rounded-full bg-[#00A5A3]">
+            <ArrowUpRight className="w-5 h-5 align-[center] text-[#fff] text-[10px]" />
+          </span>
         </button>
       </div>
     </motion.div>

@@ -7,7 +7,7 @@ export function Logo() {
       <Image
         src="/navbar_logo.svg"
         alt="Trescon Logo"
-        width={120}
+        width={100}
         height={60}
         priority
       />
