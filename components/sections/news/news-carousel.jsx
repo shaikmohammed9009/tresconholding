@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ArrowLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { NewsCard } from './news-card';
 import { useWindowSize } from '../../../hooks/useWindowSize';
 
@@ -34,22 +34,22 @@ export function NewsCarousel({ items }) {
   );
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 relative">
       {totalPages > 1 && (
-        <div className="flex justify-end space-x-4 mb-6">
+        <div className={`flex ${width < 770 ? 'justify-center bottom-[-20%] left-1/2 transform -translate-x-1/2' : 'justify-end top-[-16.5%] right-0'} space-x-4 mb-6 absolute`}>
           <button
             onClick={prevSlide}
-            className="p-2 rounded-full border bg-[#C0F43C] border-[#C0F43C] hover:bg-[#C0F43C] hover:text-white transition-colors"
+            className="p-3 rounded-full border bg-[#C0F43C] border-[#C0F43C] text-[#1E2124] hover:bg-[#C0F43C]/90 hover:text-[#000] transition-transform transform hover:scale-105"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="p-2 rounded-full border bg-[#C0F43C] border-[#C0F43C] hover:bg-[#C0F43C] hover:text-white transition-colors"
+            className="p-3 rounded-full border bg-[#C0F43C] border-[#C0F43C] text-[#1E2124] hover:bg-[#C0F43C] hover:text-[#000] transition-transform transform hover:scale-105"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5" />
           </button>
         </div>
       )}
