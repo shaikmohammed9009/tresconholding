@@ -2,16 +2,16 @@ export const impactCards = [
   {
     id: 'sustainability',
     title: 'Sustainability',
-    image: '/Sustainability.png'
+    image: '/impact_sustainability.jpg'
   },
   {
     id: 'innovation',
     title: 'Driving Innovation',
-    image: '/game_image.png'
+    image: '/impact_innovation.jpg'
   },
   {
     id: 'social-impact',
     title: 'Delivering Social Impact',
-    image: '/game_image2.png'
+    image: '/impact_social.jpg'
   }
 ];

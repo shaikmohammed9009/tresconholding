@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { impactCards } from '../impact-new/impact-data';
 
 export function ImpactCards() {
@@ -13,28 +12,26 @@ export function ImpactCards() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="group relative overflow-hidden rounded-lg"
+          transition={{ duration: 0.1, delay: index * 0.1 }}
+          className="group relative overflow-hidden "
+          style={{ 
+            backgroundImage: `url(${card.image})`, 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',
+            height: '220px',
+            transition: 'transform 0.1s ease-in-out'
+          }}
+          whileHover={{ scale: 1.02 }}
         >
-          <div className="relative aspect-[5/3]">
-            <Image
-              src={card.image}
-              alt={card.title}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-[#00A5A3]/0 group-hover:bg-[#00A5A3]/80 transition-colors duration-300" />
-            
-            {/* Title */}
-            <div className="absolute inset-0 flex items-center justify-center p-6">
-              <h4 className="text-white text-2xl font-semibold text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {card.title}
-              </h4>
-            </div>
-            
-            {/* Decorative dot */}
-            {/* <div className="absolute top-4 right-4 w-6 h-6 bg-[#C0F43C] rounded-full" /> */}
+          <div className="absolute inset-0  transition-transform duration-100" />
+          
+          {/* Title */}
+          <div className="absolute top-4 left-4 px-3 py-2">
+            <h4 className="text-white text-2xl font-semibold transition-opacity duration-100">
+              {card.title}
+            </h4>
           </div>
+          
         </motion.div>
       ))}
     </div>
