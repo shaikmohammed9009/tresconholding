@@ -1,5 +1,3 @@
-
-
     "use client";
 
 import { motion } from 'framer-motion';
@@ -16,15 +14,15 @@ export function ImpactContent() {
       className="space-y-8"
     >
       <h3 
-        className="font-['Anek_Devanagari'] text-[38px] text-left md:text-left md:text-[60px] font-[500] leading-[45px] md:leading-[78px] text-[#003B3D]  lg:text-left"
+        className="font-['Anek_Devanagari'] text-[38px] text-left md:text-left md:text-[50px] font-[500] leading-[45px] md:leading-[70px] text-[#003B3D]  lg:text-left"
       >
         Empowering Change, Driving Innovation, and Creating Lasting Impact
       </h3>
       
-      <div className="flex justify-center lg:justify-start">
+      <div className="flex justify-start lg:justify-start">
       <Link
       href="#"
-      className="inline-flex items-center !text-[20px] line-[30px] mt-20 gap-4 text-[#3F3F3F]  transition-colors font-manrope text-base font-semibold mt-6 group"
+      className="inline-flex items-center !text-[20px] line-[30px] gap-4 text-[#3F3F3F]  transition-colors font-manrope text-base  mt-0 group"
     >
       View Website
       <button className=" p-3 rounded-full rounded-full bg-[#00A5A3] text-[#fff]">

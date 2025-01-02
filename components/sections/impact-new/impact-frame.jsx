@@ -10,14 +10,14 @@ export function ImpactFrame() {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="relative w-full max-w-[500px] mx-auto"
+      className="relative w-full  mx-auto"
     >
       {/* Video frame */}
       <div className="relative">
         <Image
           src="/full_image.png"
           alt="Video frame"
-          width={500}
+          width={100}
           height={281}
           className="w-full h-auto"
         />
